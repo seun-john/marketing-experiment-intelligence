@@ -1,0 +1,7 @@
+{
+  "source": "http://www.minethatdata.com/Kevin_Hillstrom_MineThatData_E-MailAnalytics_DataMiningChallenge_2008.03.20.csv",
+  "sha256": "0e5893329d8b93cefecc571777672028290ab69865718020c78c7284f291aece",
+  "rows": 64000,
+  "transformations": "None; original bytes and duplicate-looking records retained",
+  "redistribution": "No explicit dataset redistribution licence verified; customer-level files excluded from Git"
+}

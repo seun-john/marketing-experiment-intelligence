@@ -1,0 +1,2 @@
+-- All rates and mean spending use all assigned customers, including zeros.
+WITH g AS (SELECT segment, AVG(conversion) AS conversion, AVG(visit) AS visit, AVG(spend) AS spend FROM customers GROUP BY segment) SELECT t.segment, (t.conversion-c.conversion)/NULLIF(c.conversion,0) AS conversion_lift, (t.visit-c.visit)/NULLIF(c.visit,0) AS visit_lift, (t.spend-c.spend)/NULLIF(c.spend,0) AS spend_lift FROM g t CROSS JOIN g c WHERE c.segment='No E-Mail' AND t.segment<>'No E-Mail';

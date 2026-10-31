@@ -1,0 +1,20 @@
+{
+  "Womens E-Mail": {
+    "n": 21387,
+    "conversion": 189,
+    "visit": 3238,
+    "spend": 23038.110000000004
+  },
+  "No E-Mail": {
+    "n": 21306,
+    "conversion": 122,
+    "visit": 2262,
+    "spend": 13908.33
+  },
+  "Mens E-Mail": {
+    "n": 21307,
+    "conversion": 267,
+    "visit": 3894,
+    "spend": 30311.69000000002
+  }
+}

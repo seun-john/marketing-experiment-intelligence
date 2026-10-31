@@ -1,0 +1,9 @@
+{
+  "srm_statistic": 0.20253125000000002,
+  "srm_p": 0.9036929575604196,
+  "expected_allocation": "Assumed approximate 1:1:1",
+  "omnibus_p": {
+    "conversion": 1.0020031529493264e-12,
+    "visit": 2.869178384267155e-110
+  }
+}

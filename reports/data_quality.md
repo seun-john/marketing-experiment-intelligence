@@ -1,0 +1,76 @@
+# Data quality
+
+{
+  "rows": 64000,
+  "columns": 12,
+  "missing": {
+    "recency": 0,
+    "history_segment": 0,
+    "history": 0,
+    "mens": 0,
+    "womens": 0,
+    "zip_code": 0,
+    "newbie": 0,
+    "channel": 0,
+    "segment": 0,
+    "visit": 0,
+    "conversion": 0,
+    "spend": 0
+  },
+  "duplicate_looking_rows": 6562,
+  "dtypes": {
+    "recency": "int64",
+    "history_segment": "str",
+    "history": "float64",
+    "mens": "int64",
+    "womens": "int64",
+    "zip_code": "str",
+    "newbie": "int64",
+    "channel": "str",
+    "segment": "str",
+    "visit": "int64",
+    "conversion": "int64",
+    "spend": "float64"
+  },
+  "ranges": {
+    "recency": {
+      "min": 1,
+      "max": 12
+    },
+    "history": {
+      "min": 29.99,
+      "max": 3345.93
+    },
+    "mens": {
+      "min": 0,
+      "max": 1
+    },
+    "womens": {
+      "min": 0,
+      "max": 1
+    },
+    "newbie": {
+      "min": 0,
+      "max": 1
+    },
+    "visit": {
+      "min": 0,
+      "max": 1
+    },
+    "conversion": {
+      "min": 0,
+      "max": 1
+    },
+    "spend": {
+      "min": 0.0,
+      "max": 499.0
+    }
+  },
+  "groups": {
+    "Womens E-Mail": 21387,
+    "Mens E-Mail": 21307,
+    "No E-Mail": 21306
+  }
+}
+
+Original bytes retained. No row deletion, imputation, recoding or winsorisation. Duplicate-looking rows are not proof of duplicated customers. Numeric ranges and exact original group names appear above.

@@ -1,0 +1,15 @@
+statistic,p_value,df,method,attribute,outcome,p_adjusted
+18.873681342331157,0.6531152388885031,22,HC3 joint Wald test; additive scale; exploratory unadjusted,recency,conversion,1.0
+28.756700556523942,0.15193911594219714,22,HC3 joint Wald test; additive scale; exploratory unadjusted,recency,spend,1.0
+25.96598474900322,0.010853460725347642,12,HC3 joint Wald test; additive scale; exploratory unadjusted,history_segment,conversion,0.151948450154867
+20.843346407999412,0.05272199753205492,12,HC3 joint Wald test; additive scale; exploratory unadjusted,history_segment,spend,0.5158404791801375
+8.657221652120644,0.013185852215182278,2,HC3 joint Wald test; additive scale; exploratory unadjusted,mens,conversion,0.17141607879736961
+4.5534537614214585,0.10261954362499856,2,HC3 joint Wald test; additive scale; exploratory unadjusted,mens,spend,0.8209563489999885
+7.751960259620434,0.02073400589407575,2,HC3 joint Wald test; additive scale; exploratory unadjusted,womens,conversion,0.248808070728909
+1.055098823291662,0.5900491670060846,2,HC3 joint Wald test; additive scale; exploratory unadjusted,womens,spend,1.0
+1.3440130643606398,0.8538650568637655,4,HC3 joint Wald test; additive scale; exploratory unadjusted,zip_code,conversion,1.0
+3.8167125417544163,0.43137900874794166,4,HC3 joint Wald test; additive scale; exploratory unadjusted,zip_code,spend,1.0
+7.0469189678871045,0.029497213316566618,2,HC3 joint Wald test; additive scale; exploratory unadjusted,newbie,conversion,0.3244693464822328
+5.929085606333374,0.05158404791801375,2,HC3 joint Wald test; additive scale; exploratory unadjusted,newbie,spend,0.5158404791801375
+4.322281756302373,0.36414327421057396,4,HC3 joint Wald test; additive scale; exploratory unadjusted,channel,conversion,1.0
+4.7376782855064015,0.3152873209931507,4,HC3 joint Wald test; additive scale; exploratory unadjusted,channel,spend,1.0

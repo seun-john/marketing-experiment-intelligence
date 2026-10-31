@@ -1,0 +1,55 @@
+feature,treatment,reference,smd
+recency,Mens E-Mail,No E-Mail,0.006831532454259954
+history,Mens E-Mail,No E-Mail,0.00761286832154239
+mens,Mens E-Mail,No E-Mail,-0.0045823256374879625
+womens,Mens E-Mail,No E-Mail,0.007588929691887142
+newbie,Mens E-Mail,No E-Mail,-0.0008918953696535328
+history_segment_1) $0 - $100,Mens E-Mail,No E-Mail,0.010916720554376393
+history_segment_2) $100 - $200,Mens E-Mail,No E-Mail,-0.016359543173779502
+history_segment_3) $200 - $350,Mens E-Mail,No E-Mail,0.005470713585408414
+history_segment_4) $350 - $500,Mens E-Mail,No E-Mail,-0.004257423463175294
+history_segment_5) $500 - $750,Mens E-Mail,No E-Mail,-0.009740129383845251
+"history_segment_6) $750 - $1,000",Mens E-Mail,No E-Mail,0.006073217597584176
+"history_segment_7) $1,000 +",Mens E-Mail,No E-Mail,0.015834592826810663
+channel_Multichannel,Mens E-Mail,No E-Mail,-0.004181536419632754
+channel_Phone,Mens E-Mail,No E-Mail,-0.008275992307117473
+channel_Web,Mens E-Mail,No E-Mail,0.011013588354428299
+zip_code_Rural,Mens E-Mail,No E-Mail,0.01365900039927897
+zip_code_Surburban,Mens E-Mail,No E-Mail,-0.01174335672606268
+zip_code_Urban,Mens E-Mail,No E-Mail,0.0019722315768513645
+recency,Womens E-Mail,No E-Mail,0.005180013205688683
+history,Womens E-Mail,No E-Mail,0.006510722458553667
+mens,Womens E-Mail,No E-Mail,-0.008630731202832915
+womens,Womens E-Mail,No E-Mail,0.004946313992582152
+newbie,Womens E-Mail,No E-Mail,0.0025567009140795606
+history_segment_1) $0 - $100,Womens E-Mail,No E-Mail,-0.0006771130829583109
+history_segment_2) $100 - $200,Womens E-Mail,No E-Mail,-0.014286147854542706
+history_segment_3) $200 - $350,Womens E-Mail,No E-Mail,0.011350888687263824
+history_segment_4) $350 - $500,Womens E-Mail,No E-Mail,0.008677899940116288
+history_segment_5) $500 - $750,Womens E-Mail,No E-Mail,0.0006499424018974358
+"history_segment_6) $750 - $1,000",Womens E-Mail,No E-Mail,-0.008819306801837288
+"history_segment_7) $1,000 +",Womens E-Mail,No E-Mail,0.0034993920645670033
+channel_Multichannel,Womens E-Mail,No E-Mail,-0.00528289712504171
+channel_Phone,Womens E-Mail,No E-Mail,0.008622833281250204
+channel_Web,Womens E-Mail,No E-Mail,-0.005147863897421752
+zip_code_Rural,Womens E-Mail,No E-Mail,0.00395850560137286
+zip_code_Surburban,Womens E-Mail,No E-Mail,-0.0010891197386245202
+zip_code_Urban,Womens E-Mail,No E-Mail,-0.0017628666291550237
+recency,Mens E-Mail,Womens E-Mail,0.0016491266166754931
+history,Mens E-Mail,Womens E-Mail,0.0011607131531366143
+mens,Mens E-Mail,Womens E-Mail,0.004048365969302671
+womens,Mens E-Mail,Womens E-Mail,0.002642591605171676
+newbie,Mens E-Mail,Womens E-Mail,-0.0034485982907791336
+history_segment_1) $0 - $100,Mens E-Mail,Womens E-Mail,0.011593852766652946
+history_segment_2) $100 - $200,Mens E-Mail,Womens E-Mail,-0.0020733555930348663
+history_segment_3) $200 - $350,Mens E-Mail,Womens E-Mail,-0.0058801672963692975
+history_segment_4) $350 - $500,Mens E-Mail,Womens E-Mail,-0.012935125066890827
+history_segment_5) $500 - $750,Mens E-Mail,Womens E-Mail,-0.010390026291338835
+"history_segment_6) $750 - $1,000",Mens E-Mail,Womens E-Mail,0.014890371721524928
+"history_segment_7) $1,000 +",Mens E-Mail,Womens E-Mail,0.012337976377968008
+channel_Multichannel,Mens E-Mail,Womens E-Mail,0.001101366720564138
+channel_Phone,Mens E-Mail,Womens E-Mail,-0.016899120365944938
+channel_Web,Mens E-Mail,Womens E-Mail,0.016161676963050382
+zip_code_Rural,Mens E-Mail,Womens E-Mail,0.00970055448553322
+zip_code_Surburban,Mens E-Mail,Womens E-Mail,-0.010654203964959778
+zip_code_Urban,Mens E-Mail,Womens E-Mail,0.003735101342310665
