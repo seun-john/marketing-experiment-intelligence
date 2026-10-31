@@ -73,5 +73,6 @@ TensorFlow Datasets, hillstrom catalogue. https://www.tensorflow.org/datasets/ca
     (out/'data_quality.md').write_text('# Data quality\n\n'+json.dumps(quality,indent=2)+'\n\nOriginal bytes retained. No row deletion, imputation, recoding or winsorisation. Duplicate-looking rows are not proof of duplicated customers. Numeric ranges and exact original group names appear above.',encoding='utf-8')
     import runpy
     runpy.run_path(str(ROOT/'finalize_docs.py'))
+    runpy.run_path(str(ROOT/'build_page_data.py'))
     print(s.to_string(index=False));print(e[['outcome','treatment','reference','effect','ci_low','ci_high','p_adjusted']].to_string(index=False))
 if __name__=='__main__': run()

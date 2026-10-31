@@ -1,5 +1,9 @@
 # Marketing Experiment Intelligence
 
+[**Explore the public project page →**](https://seun-john.github.io/marketing-experiment-intelligence/)
+
+The public page includes interactive aggregate results, report downloads and actual dashboard captures. The full Streamlit workspace runs separately using the setup commands below.
+
 A randomised marketing experiment evaluated through intention-to-treat estimates, SQL reconciliation and an interactive Streamlit decision workspace.
 
 The retailer's question is whether promotional email causes incremental visits, purchases and spending. The no-email group measures outcomes that would occur without an email assignment. Conversion is the fixed primary outcome; visits and spending are secondary.

@@ -1,0 +1,20 @@
+'use strict';
+const labels={conversion:'Purchase conversion',visit:'Website visits',spend:'Spending per assigned customer'};
+const names={'No E-Mail':'No email · control','Mens E-Mail':'Men’s email','Womens E-Mail':'Women’s email'};
+const colors={'No E-Mail':'#718095','Mens E-Mail':'#204fc4','Womens E-Mail':'#b45309'};
+let dataset;
+function format(value,metric){return metric==='spend'?'$'+value.toFixed(3):(value*100).toFixed(3)+'%'}
+function signed(value,metric){return (value>=0?'+':'−')+(metric==='spend'?'$':'')+Math.abs(value*(metric==='spend'?1:100)).toFixed(3)}
+function show(metric){
+ document.querySelectorAll('[data-metric]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.metric===metric)));
+ document.getElementById('chart-title').textContent=labels[metric];
+ const max=Math.max(...dataset.groups.map(g=>g[metric]));
+ document.getElementById('bars').innerHTML=dataset.groups.map(g=>`<div class="bar-row"><div class="bar-label"><span>${names[g.segment]}</span><strong>${format(g[metric],metric)}</strong></div><div class="bar-track"><div class="bar-fill" style="width:${g[metric]/max*100}%;background:${colors[g.segment]}"></div></div><small>${g.customers.toLocaleString('en-US')} assigned customers${metric==='conversion'?' · '+g.conversions+' purchases':metric==='visit'?' · '+g.visits.toLocaleString('en-US')+' visits':''}</small></div>`).join('');
+ document.getElementById('chart-note').textContent=metric==='spend'?'Historical dollars per assigned customer, including every zero-spend customer. Bars show group means.':'Descriptive group rates use all assigned customers as denominators. Bar lengths are scaled to the largest observed rate.';
+ const rows=dataset.effects.filter(r=>r.outcome===metric&&r.reference==='No E-Mail');
+ document.getElementById('effects').innerHTML=rows.map(r=>`<div class="effect"><div class="effect-name">${names[r.treatment]} vs no email</div><div class="effect-value" style="color:${colors[r.treatment]}">${signed(r.effect,metric)}<span>${metric==='spend'?'per customer':'percentage points'}</span></div><div class="effect-ci">95% CI: ${signed(r.ci_low,metric)} to ${signed(r.ci_high,metric)}${metric==='spend'?'':' pp'} · ${(r.relative_lift*100).toFixed(1)}% relative lift</div><div class="effect-p">Holm-adjusted p = ${r.p_adjusted.toExponential(3)}</div></div>`).join('');
+ document.getElementById('inference-note').textContent=metric==='conversion'?'Primary analysis: two campaign/control tests, Holm correction at family-wise α = 0.05. Newcombe pointwise intervals.':metric==='visit'?'Secondary analysis: Holm correction across seven exploratory comparisons. Two-proportion tests; Newcombe pointwise intervals.':'Secondary analysis: Holm correction across seven exploratory comparisons. Welch mean tests; 2,000-draw empirical bootstrap intervals.';
+}
+fetch('results.json').then(r=>{if(!r.ok)throw Error('Results unavailable');return r.json()}).then(data=>{dataset=data;show('conversion');document.querySelectorAll('[data-metric]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.metric)))}).catch(()=>{document.getElementById('bars').innerHTML='<p>Interactive results could not load. <a href="analytical_report.html">Read the complete analytical report.</a></p>'});
+const screens={overview:['dashboard_overview.png','Actual Streamlit executive overview showing customer counts, conversion rates and treatment-effect intervals'],segments:['dashboard_segments.png','Actual Streamlit customer segment view with treatment-effect intervals and exploratory interaction evidence'],roi:['dashboard_roi.png','Actual Streamlit hypothetical marketing economics simulator with explicit cost and contribution assumptions']};
+document.querySelectorAll('[data-screen]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-screen]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));const [file,description]=screens[b.dataset.screen];const img=document.getElementById('dashboard');img.src='assets/'+file;img.alt=description;document.getElementById('screen-caption').textContent=description+'. This is a screenshot of the separately runnable Python application.'}));
