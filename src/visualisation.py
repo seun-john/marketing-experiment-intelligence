@@ -15,4 +15,5 @@ def forest(table,outcome,relative=False):
     t['plus']=t.high-t.value;t['minus']=t.value-t.low
     fig=px.scatter(t,x='value',y='comparison',error_x='plus',error_x_minus='minus',color='treatment',color_discrete_sequence=COLORS[1:],hover_data=['n_treatment','n_reference'])
     fig.add_vline(x=0,line_dash='dot',line_color='#64748B');fig.update_xaxes(title=unit)
-    return finish(fig,'Treatment effects · pointwise 95% confidence intervals')
+    return finish(fig,'Relative spending lift · point estimates (intervals not estimated)' if relative and outcome=='spend' else 'Treatment effects · pointwise 95% confidence intervals')
+
